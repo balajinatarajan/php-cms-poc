@@ -1,8 +1,9 @@
 $(document).ready(function(){
     //SHOW Save button when a contenteditable html element is clicked on
-$("*[contenteditable=true]").click(function(){
-    $('#savetocms').show();  
-});
+//$("*[contenteditable=true]").click(function(){
+//    $('#savetocms').show();  
+//});
+    insertCMSNav();
 
 $('#savetocms').on('click',function(){
     console.log('button clicked');
@@ -10,6 +11,13 @@ $('#savetocms').on('click',function(){
 });
     
 });
+
+function insertCMSNav(){
+    $('body').css('margin-top','100px');
+    $('#mainNav').css('margin-top','50px');
+    $('body').append('<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="-webkit-box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.75);-moz-box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.75);box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.75);background-color: white;" id="cmsNav"><div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">CMS Preview Tool</a><button class="btn btn-primary hide" id="savetocms">Save</button>');
+}
+
 
 /*function to save content editable fields on the page */
 function savePageData(){
