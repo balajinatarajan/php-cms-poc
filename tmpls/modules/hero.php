@@ -4,13 +4,13 @@
     $attr = get_module_attributes($module_id);
     
 ?>
-<header class="masthead">
+<header class="masthead" data-module-id="<?php echo $module_id;?>">
       <div class="container h-100">
         <div class="row h-100">
           <div class="col-lg-7 my-auto">
             <div class="header-content mx-auto">
-              <h1 class="mb-5"><?php echo $attr['h1'];?></h1>
-              <a href="<?php echo $attr['cta_link'];?>" class="btn btn-outline btn-xl js-scroll-trigger"><?php echo $attr['cta_label'];?></a>
+              <h1 class="mb-5" contenteditable="true" name="h1"><?php echo $attr['h1'];?></h1>
+              <a href="<?php echo $attr['cta_link'];?>" class="btn btn-outline btn-xl js-scroll-trigger" contenteditable="true" name="cta_label"><?php echo $attr['cta_label'];?></a>
             </div>
           </div>
           <div class="col-lg-5 my-auto">
